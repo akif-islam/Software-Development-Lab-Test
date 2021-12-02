@@ -1,4 +1,4 @@
-//Task#2.	Application now terminates early if the number of arguments passed into it is wrong, fix it.
+// Task#1.	Update code style for better consistency.
 
 import java.io.*;
 import java.text.*;
@@ -9,14 +9,9 @@ public class StudentList {
     public static void main(String[] args) {
 
         // Check arguments
-//        System.out.println("Hello Sagor :) Running");
-//        System.out.println(args.length);
-        if((args.length>1) || (args[0].length())>1){
-            System.out.println("Tata Bye Bye");
-        }
-        
-        else if (args[0].equals("a")) {
-            System.out.println("List of Students...");
+
+        if (args[0].equals("a")) {
+            System.out.println("... List of Students ...");
 
             try {
 
@@ -35,7 +30,7 @@ public class StudentList {
 
         else if (args[0].equals("r")) {
 
-            System.out.println("..Picking Up Random Student ...");
+            System.out.println("... Picking Random Student...");
 
             try {
                 BufferedReader s = new BufferedReader(new InputStreamReader(new FileInputStream("students.txt")));
@@ -58,7 +53,7 @@ public class StudentList {
 
         else if (args[0].contains("+")) {
 
-            System.out.println(".. Added new element ...");
+            System.out.println("Loading data ...");
 
             try {
 
@@ -93,6 +88,8 @@ public class StudentList {
                 String i[] = r.split(",");
 
                 boolean done = false;
+	else {
+
 
                 String t = args[0].substring(1);
 
@@ -140,7 +137,5 @@ public class StudentList {
             System.out.println("Data Loaded.");
 
         }
-
-
     }
 }
